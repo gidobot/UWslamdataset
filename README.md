@@ -29,7 +29,9 @@ UWslam_dataset
 
 ## Overview
 
-For the hybrid sequences, the ground truth camera poses are given as the transform from the respectful camera frame to the world frame. The stereo ground truth poses are given with respect to the COLMAP world frame.
+For the hybrid sequences, the ground truth camera poses are given as the transform from the respectful camera frame to the world frame. Hybrid images were collected at 3Hz.
+
+For the stereo dataset, the ground truth poses are given with respect to the COLMAP world frame. The stereo frames were collected at 5Hz.
 
 The utils folder provides scripts for evaluating results on the stereo dataset and the hybrid image dataset.
 
