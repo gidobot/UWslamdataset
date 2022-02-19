@@ -16,13 +16,13 @@ UWslam_dataset
 │       │   camera_poses.txt -> ground truth camera poses
 │       │   times.txt -> image timestamps
 │       └───images/raw -> folder containing rectified stereo and raw fisheye images
-└───stereo 
+└───stereo
+│   │   gt_poses.txt -> ground truth trajectory
+│   │   times.txt -> image timestamps
 │   └───calibration  
 │   │   │   left_camera.yaml -> calibration file for left stereo camera
 │   │   │   right_camera.yaml -> calibration file for right stereo camera
 │   └───images -> folder containing rectified stereo images
-│   gt_poses.txt -> ground truth trajectory
-│   times.txt -> image timestamps
 └───stereo
 │   │   SIFTvoc.txt -> SIFT DBOW2 vocabulary trained on underwater images
 ```
