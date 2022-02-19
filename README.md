@@ -24,7 +24,7 @@ UWslam_dataset
 │   │   │   right_camera.yaml -> calibration file for right stereo camera
 │   └───images -> folder containing rectified stereo images
 └───sift_vocabulary
-│   │   SIFTvoc.txt -> 1 million word SIFT DBOW2 vocabulary trained on underwater images
+    │   SIFTvoc.txt -> 1 million word SIFT DBOW2 vocabulary trained on underwater images
 ```
 
 ## Overview
