@@ -1,6 +1,6 @@
 # UWslam_dataset
 This is a meta repository for UWslam dataset, which can be downloaded from this Google Drive link:  
-[**[UWslam]**](https://drive.google.com/file/d/1mZYeBiceVeo9dRYaCuJBaY63NufiA_fB/view?usp=sharing)
+[**[UWslam_dataset]**](https://drive.google.com/file/d/1jV2dmvPZpjScwCPO0kNTN4jIHaDL8FU-/view?usp=sharing)
 
 UWslam is a dataset for underwater stereo and hybrid monocular fisheye + stereo SLAM in natural seafloor environments. The dataset includes a spiral survey of a shallow reef captured with a diver operated stereo rig and 4 hybrid image sequences captured with a deep ocean ROV in different deep ocean environments. Ground truth pose estimates for the spiral stereo trajectory were obtained by processing the image sequence through COLMAP. Ground truth pose estimates for the hybrid sequences were obtained by distributing fiducials on the seafloor before capturing an image sequence and processing the image sequences with the ROS based [**TagSLAM**](https://berndpfrommer.github.io/tagslam_web/) package.
 
@@ -13,22 +13,30 @@ UWslam_dataset
 │   │   │   left_camera.yaml -> calibration file for left stereo camera
 │   │   │   right_camera.yaml -> calibration file for right stereo camera
 │   └───<set name>
-│       │   camera_poses.txt -> ground truth camera poses
+│       │   camera_poses.txt -> ground truth hybrid camera poses in line format: timestamp fish_tx fish_ty fish_tz fish_qw fish_qx fish_qy fish_qz stereo_tx stereo_ty stereo_tz stereo_qw stereo_qx stereo_qy stereo_qz
 │       │   times.txt -> image timestamps
 │       └───images/raw -> folder containing rectified stereo and raw fisheye images
 └───stereo -> folder for stereo survey sequence
-│   │   gt_poses.txt -> ground truth trajectory
+│   │   gt_poses.txt -> ground truth trajectory in format: tx ty tz
 │   │   times.txt -> image timestamps
 │   └───calibration  
 │   │   │   left_camera.yaml -> calibration file for left stereo camera
 │   │   │   right_camera.yaml -> calibration file for right stereo camera
 │   └───images -> folder containing rectified stereo images
-└───stereo
-│   │   SIFTvoc.txt -> SIFT DBOW2 vocabulary trained on underwater images
+└───sift_vocabulary
+│   │   SIFTvoc.txt -> 1 million word SIFT DBOW2 vocabulary trained on underwater images
 ```
-<!--
+
 ## Overview
 
+For the hybrid sequences, the ground truth camera poses are given as the transform from the respectful camera frame to the world frame. The stereo ground truth poses are given with respect to the COLMAP world frame.
+
+The utils folder provides scripts for evaluating results on the stereo dataset and the hybrid image dataset.
+
+The SIFT DBoW2 vocabulary can be used with a modified version of the DBoW2 library available here:
+[**[DBoW2]**](https://github.com/gidobot/DBoW2)
+
+<!--
 Sample annotated sequence, showing center rectified images for visualization of the model handle projections
 
 ![Output sample](https://github.com/gidobot/gifs/raw/master/VisPose_Reviewer.gif)
