@@ -54,10 +54,14 @@ The sequence consistent camera poses for input to the VisPose annotation tool we
 ## Citation
 If you use this dataset, we request you to cite the following work.
 ```
-@article{billings2021hybrid,
+@article{billings2022hybrid,
   title={Hybrid Visual SLAM for Underwater Vehicle Manipulator Systems},
   author={Billings, Gideon and Camilli, Richard and Johnson-Roberson, Matthew},
-  journal={arXiv preprint arXiv:2112.03826},
-  year={2021}
+  journal={IEEE Robotics and Automation Letters},
+  volume={7},
+  number={3},
+  pages={6798--6805},
+  year={2022},
+  publisher={IEEE}
 }
 ```
