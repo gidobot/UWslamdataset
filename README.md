@@ -40,7 +40,7 @@ Below is a sample sequence showing the AprilTag detector and TagSLAM estimated c
 
 Below is a sample left stereo image from the shallow reef spiral survey dataset and the COLMAP reconstruction of the full survey.
 
-![uwslam_reef](https://github.com/gidobot/UWslamdataset/assets/6425217/c47dabcf-d44a-4a85-af18-0a387de87caf)
+![uwslam_reef](https://github.com/gidobot/UWslamdataset/assets/6425217/c47dabcf-d44a-4a85-af18-0a387de87caf | width=100)
 
 The dataset is organized by the following file structure
 ```
