@@ -1,4 +1,4 @@
-# Underwater SLAM dataset (UWslam_dataset)
+# Underwater SLAM dataset
 
 This is a meta repository for UWslam dataset, which can be downloaded from this link:  
 [**[UWslam_dataset]**](https://deepblue.lib.umich.edu/data/concern/data_sets/rj430494s?locale=en#read_me_display)
